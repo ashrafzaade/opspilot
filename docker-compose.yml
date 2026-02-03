@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: opspilot
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/opspilot
+      OPENAI_KEY: ${OPENAI_KEY}
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
