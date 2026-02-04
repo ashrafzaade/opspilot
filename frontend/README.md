@@ -1,5 +1,7 @@
 # OpsPilot — AI-Powered Internal Operations Dashboard
 
+![Dashboard](screenshot.png)
+
 Small full-stack MVP demonstrating internal tools + automation + AI-assisted workflows.
 
 Built to showcase rapid MVP → production thinking.
@@ -41,3 +43,14 @@ Backend → OpenAI (if API key provided)
 
 ```bash
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=opspilot --name opspilot-db postgres:15
+```
+
+---
+
+## Why this project
+
+Built in ~1 day as a rapid MVP to demonstrate automation-first, AI-ready internal tooling.
+
+Inspired by real-world telecom operations and internal tooling experience.
+Goal: reduce manual work using automation and GenAI.
+
